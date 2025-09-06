@@ -1,1 +1,1 @@
-Nakts tulkotāja
+Nakts tulkotāja tulko naktī
