@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NAKTS TULKOTĀJA — Tulkošanas pakalpojumi</title>
+    <meta name="description" content="NAKTS TULKOTĀJA — Gada pārskatu, ilgtspējas pārskatu, transfertcenu pārskatu un citu finanšu/biznesa pārskatu tulkošana. Tulkotāja ar starptautisku finanšu un revīzijas kvalifikācijām un pieredzi." />
+    <style>
+      :root{
+        --bg: #0a0a10; /* black */
+        --text: #f7f8fb;
+        --muted: #b8c2d9;
+        --accent: #2563eb; /* blue */
+        --navy: #0b1b3f; /* navy */
+      }
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{
+        margin:0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+        color:var(--text);
+        background: var(--bg);
+      }
+      .container{max-width:1100px;margin:0 auto;padding:24px}
+      .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+      .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+      .logo .dot{width:10px;height:10px;border-radius:9999px;background:linear-gradient(135deg,#9b5cff,#54d1ff)}
+      .nav a{color:var(--muted);text-decoration:none;font-weight:600}
+      .btn{display:inline-block;padding:12px 18px;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid #ffffff22;backdrop-filter: blur(4px)}
+      .btn-primary{background:linear-gradient(135deg,#7c5cff,#54d1ff);color:#0b0b12;border:none}
+      .btn-ghost{color:var(--text)}
+      .hero{position:relative;min-height:84vh;display:grid;place-items:center;overflow:hidden}
+      canvas.webgl{position:absolute;inset:0;width:100%;height:100%;display:block}
+      .hero-inner{position:relative;z-index:2;text-align:center;padding:48px 16px}
+      .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#ffffff14;border:1px solid #ffffff22;font-size:12px;color:var(--muted)}
+      h1{font-size: clamp(36px, 6vw, 70px); line-height:1.06;margin:18px 0 12px}
+      p.sub{color:var(--muted);max-width:680px;margin:0 auto 26px;font-size: clamp(14px, 2.4vw, 18px)}
+      .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+      .logos{opacity:.8;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:44px 0}
+      .logos img{height:22px;opacity:.9;filter:grayscale(100%) brightness(1.2)}
+      .features{background: radial-gradient(1200px 600px at 50% -10%, #7c5cff22, transparent 60%);}
+      .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+      @media (max-width:900px){.grid{grid-template-columns:1fr}}
+      .card{border:1px solid #ffffff1f;background:#0f0f18; padding:20px;border-radius:16px}
+      .card h3{margin:0 0 8px}
+      footer{color:#9aa0aa;padding:40px 0;text-align:center}
+      .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    </style>
+  </head>
+  <body>
+    <header class="container nav" aria-label="Main">
+      <a class="logo" href="#">
+        <span class="dot" aria-hidden="true" style="background:linear-gradient(135deg,#0b1b3f,#2563eb)"></span>
+        NAKTS TULKOTĀJA
+      </a>
+      <nav>
+        <a href="#pakalpojumi" data-i18n="nav.services">Pakalpojumi</a>
+        <span style="opacity:.3;margin:0 .6rem">•</span>
+        <a href="#pieredze" data-i18n="nav.experience">Pieredze</a>
+        <span style="opacity:.3;margin:0 .6rem">•</span>
+        <a href="#kontakti" data-i18n="nav.contact">Kontakti</a>
+        <span style="opacity:.3;margin:0 .6rem">•</span>
+        <a class="btn btn-primary" href="#quote" aria-label="Get a quote" data-i18n="nav.quote">Get a quote</a>
+        <span style="opacity:.3;margin:0 .6rem">•</span>
+        <div aria-label="Language" style="display:inline-flex;gap:6px;vertical-align:middle">
+          <button class="btn btn-ghost" data-lang="lv" aria-label="Latviešu">LV</button>
+          <button class="btn btn-ghost" data-lang="en" aria-label="English">EN</button>
+          <button class="btn btn-ghost" data-lang="ru" aria-label="Русский">RU</button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="Hero">
+      <canvas id="shader" class="webgl" aria-hidden="true"></canvas>
+      <div class="hero-inner container">
+        <span class="eyebrow" data-i18n="cred.line">Tulkotāja ar starptautisku finanšu un revīzijas kvalifikācijām un pieredzi</span>
+        <h1 data-i18n="hero.title">NAKTS TULKOTĀJA</h1>
+        <p class="sub" data-i18n="hero.sub">Gada pārskatu, ilgtspējas pārskatu, transfertcenu pārskatu un citu finanšu un biznesa pārskatu tulkošana — rīt uz brokastlaiku.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#quote" data-i18n="cta.getQuote">Saņemt piedāvājumu</a>
+          <a class="btn btn-ghost" href="#pakalpojumi" data-i18n="cta.viewServices">Skatīt pakalpojumus</a>
+        </div>
+      </div>
+      </div>
+        <div class="logos" aria-label="Trusted by">
+          <img src="https://dummyimage.com/120x24/ffffff/000000&text=ACME" alt="ACME"/>
+          <img src="https://dummyimage.com/120x24/ffffff/000000&text=NOVA" alt="NOVA"/>
+          <img src="https://dummyimage.com/120x24/ffffff/000000&text=KITE" alt="KITE"/>
+        </div>
+      </div>
+    </section>
+
+    <main class="container features" id="pakalpojumi">
+      <div class="grid">
+        <article class="card">
+          <h3 data-i18n="services.fin.title">Finanšu pārskati</h3>
+          <p data-i18n="services.fin.text">Gada pārskati, konsolidētie pārskati, starpperiodu atskaites. Terminoloģija saskaņā ar IFRS/LKAS.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="services.esg.title">Ilgtspējas/ESG</h3>
+          <p data-i18n="services.esg.text">Ilgtspējas pārskati (CSRD), NFD, ESG paziņojumi un KPI. Precīza, konsekventa terminoloģija.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="services.tp.title">Transfertcenas</h3>
+          <p data-i18n="services.tp.text">Transfertcenu dokumentācija un atskaites. Konfidencialitāte un ātri izpildes termiņi.</p>
+        </article>
+      </div>
+    </main>
+
+    <section class="container" id="pieredze" aria-label="Pieredze" style="padding:32px 24px 12px">
+      <div class="grid" style="grid-template-columns:repeat(2,1fr)">
+        <article class="card" style="background:linear-gradient(0deg,#0b1b3f22,transparent)">
+          <h3 data-i18n="experience.qual.title">Kvalifikācijas</h3>
+          <p data-i18n="experience.qual.text">Starptautiska finanšu un revīzijas kvalifikācija. Darbs ar lielajiem četrinieka standartiem, iekšējo kontroli un finanšu terminoloģiju.</p>
+        </article>
+        <article class="card">
+          <h3 data-i18n="experience.proc.title">Process</h3>
+          <p data-i18n="experience.proc.text">Ātra uzsākšana, divpakāpju redakcija, termiņu ievērošana. Piegāde līdz rītam (pēc vienošanās).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="quote" aria-label="Piedāvājums" style="padding:12px 24px 28px">
+      <div class="card" style="display:grid; gap:12px">
+        <h3 data-i18n="quote.title">Saņemt piedāvājumu</h3>
+        <p class="sub" style="margin:0" data-i18n="quote.text">Nosūtiet saiti uz dokumentu vai pievienojiet failu un īsu aprakstu (valoda → valoda, termiņš).</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px">
+          <a class="btn btn-primary" id="mailtoBtn" href="mailto:xxxxxx.xxx@gmail.com?subject=Pied%C4%81v%C4%81jums%20%E2%80%94%20NAKTS%20TULKOT%C4%80JA&body=S%C4%81kotn%C4%93j%C4%81%20valoda:%0D%0AM%C4%93%C4%B7a%20valoda:%0D%0ATermi%C5%86%C5%A1:%0D%0ASaite%20uz%20failu:%0D%0APapildu%20info:%0D%0A" data-i18n="quote.email">Rakstīt e‑pastu</a>
+          <a class="btn btn-ghost" href="tel:+37129xxxxxx" data-i18n="quote.call">Zvanīt: 29xxxxxx</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="kontakti" aria-label="Kontakti" style="padding:0 24px 24px">
+      <div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <div>
+          <h3 data-i18n="contact.title">Kontakti</h3>
+          <p style="margin:.25rem 0 0" data-i18n="contact.email">E‑pasts: <a href="mailto:xxxxxx.xxx@gmail.com">xxxxxx.xxx@gmail.com</a></p>
+          <p style="margin:.25rem 0 0" data-i18n="contact.phone">Tālr.: <a href="tel:+37129xxxxxx">29xxxxxx</a></p>
+        </div>
+        <a class="btn btn-primary" href="#quote" data-i18n="contact.quote">Get a quote</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> NAKTS TULKOTĀJA. Visi tiesības aizsargātas.</p>
+    </footer>
+
+    <script>
+      const vert = `#version 300 es
+      in vec2 a_position; void main(){ gl_Position = vec4(a_position,0.0,1.0);} `;
+
+      const frag = `#version 300 es
+      precision highp float; out vec4 outColor; uniform vec2 u_res; uniform float u_time;
+      // Smooth multi‑octave noise by Inigo Quilez (iq) – lightweight fbm variant
+      vec2 hash(vec2 p){p=vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3)));return -1.0+2.0*fract(sin(p)*43758.5453123);}    
+      float noise(in vec2 p){const float K1=0.366025404; const float K2=0.211324865; vec2 i=floor(p+(p.x+p.y)*K1); vec2 a=p-i+(i.x+i.y)*K2; vec2 o=(a.x>a.y)?vec2(1.,0.):vec2(0.,1.); vec2 b=a-o+K2; vec2 c=a-1.+2.*K2; vec3 h=max(0.5-vec3(dot(a,a),dot(b,b),dot(c,c)),0.); vec3 n=h*h*h*h*vec3(dot(a,hash(i+0.)),dot(b,hash(i+o)),dot(c,hash(i+1.))); return dot(n,vec3(70.)); }
+      float fbm(vec2 p){ float s=0., a=0.5; for(int i=0;i<5;i++){ s+=a*noise(p); p*=2.02; a*=0.5;} return s; }
+      void main(){
+        vec2 uv = gl_FragCoord.xy / u_res.xy; 
+        vec2 st = uv*2.0-1.0; st.x*=u_res.x/u_res.y;
+        float t = u_time*0.06;
+        float n1 = fbm(st*1.4 + vec2(t, -t));
+        float n2 = fbm(st*0.9 + vec2(-t*0.6, t*0.7));
+        float n = smoothstep(0.2,0.8, 0.55*n1 + 0.45*n2);
+        vec3 c1 = vec3(0.07,0.16,0.36); // navy
+        vec3 c2 = vec3(0.15,0.39,0.98); // blue
+        vec3 c3 = vec3(0.03,0.03,0.06); // blackish bg
+        vec3 col = mix(c1, c2, n);
+        // subtle vignette for readability
+        float v = smoothstep(1.2, 0.2, length(st));
+        col = mix(c3, col, v);
+        outColor = vec4(col, 1.0);
+      }`;
+
+      const canvas = document.getElementById('shader');
+      const gl = canvas.getContext('webgl2', {antialias:true, powerPreference:'high-performance'});
+      let program, start, uTime, uRes;
+      function resize(){
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const w = canvas.clientWidth; const h = canvas.clientHeight;
+        canvas.width = Math.floor(w * dpr); canvas.height = Math.floor(h * dpr);
+        gl.viewport(0, 0, canvas.width, canvas.height);
+        gl.useProgram(program); gl.uniform2f(uRes, canvas.width, canvas.height);
+      }
+      function compile(type, src){const s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s;}
+      function init(){
+        if(!gl){ console.warn('WebGL2 not available, falling back to static gradient.'); canvas.remove(); document.querySelector('.hero').style.background = 'radial-gradient(1200px 600px at 50% 10%, #7c5cff33, transparent 60%), linear-gradient(120deg,#0b0b12,#111127)'; return; }
+        const vs = compile(gl.VERTEX_SHADER, vert);
+        const fs = compile(gl.FRAGMENT_SHADER, frag);
+        program = gl.createProgram(); gl.attachShader(program,vs); gl.attachShader(program,fs); gl.linkProgram(program); if(!gl.getProgramParameter(program,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(program));
+        gl.useProgram(program);
+        const quad = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, quad);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+        const loc = gl.getAttribLocation(program,'a_position'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+        uTime = gl.getUniformLocation(program,'u_time');
+        uRes = gl.getUniformLocation(program,'u_res');
+        resize();
+        start = performance.now();
+        requestAnimationFrame(tick);
+      }
+      function tick(now){
+        const sec = (now - start) / 1000;
+        gl.uniform1f(uTime, sec);
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+        requestAnimationFrame(tick);
+      }
+      addEventListener('resize', resize);
+      init();
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      // Simple i18n (LV default)
+      const I18N = {
+        lv: {
+          'nav.services': 'Pakalpojumi', 'nav.experience': 'Pieredze', 'nav.contact': 'Kontakti', 'nav.quote': 'Get a quote',
+          'cred.line': 'Tulkotāja ar starptautisku finanšu un revīzijas kvalifikācijām un pieredzi',
+          'hero.title': 'NAKTS TULKOTĀJA',
+          'hero.sub': 'Gada pārskatu, ilgtspējas pārskatu, transfertcenu pārskatu un citu finanšu un biznesa pārskatu tulkošana — rīt uz brokastlaiku.',
+          'cta.getQuote': 'Saņemt piedāvājumu', 'cta.viewServices': 'Skatīt pakalpojumus',
+          'services.fin.title': 'Finanšu pārskati', 'services.fin.text': 'Gada pārskati, konsolidētie pār
+</html>
